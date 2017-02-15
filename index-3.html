@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Corporate Massage Treatments</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<link rel="icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/stuck.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+<script src="js/script.js"></script> 
+<script src="js/superfish.js"></script>
+<script src="js/jquery.equalheights.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/tmStickUp.js"></script>
+<script src="js/jquery.ui.totop.js"></script>
+
+<script>
+ $(document).ready(function(){
+
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#stuck_container').tmStickUp({});
+
+  }); 
+</script>
+<style type="text/css">
+.auto-style1 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+</style>
+<!--[if lt IE 9]>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<script src="js/html5shiv.js"></script>
+<link rel="stylesheet" media="screen" href="css/ie.css">
+
+
+<![endif]-->
+<title>Rotating Testimonials with bxSlider</title>
+<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="jquery.bxslider.min.js" type="text/javascript"></script>
+<link href="jquery.bxslider.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+blockquote
+{
+    clear: both;
+    font-style: italic;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px 0 50px;
+    position: relative;
+    quotes: none;
+    background: url(https://dl.dropbox.com/u/96099766/RotatingTestimonial/open-quote.png) 0 0 no-repeat;
+    border: 0px;
+    font-size: 120%;
+    line-height: 200%;
+}
+.auto-style2 {
+	overflow: hidden;
+	margin-top: -2px;
+	text-align: center;
+}
+.auto-style5 {
+	font-size: medium;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.auto-style6 {
+	font-size: medium;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	text-align: center;
+}
+.auto-style7 {
+	font-size: large;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.auto-style8 {
+	font-size: large;
+	font-weight: normal;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	text-decoration: underline;
+}
+</style>
+<script type="text/javascript">
+         $(document).ready(function () {           
+             $('.bxslider').bxSlider({
+                 mode: 'vertical',
+                 slideMargin: 3,
+                 auto:true
+             });             
+         });
+    </script>
+<title>Testimonial Slider | Code Affair</title>
+<style>
+*{	/*some reset code, nothing else*/
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+#testimonials{
+	background: #f8f8f8 url('quote.png') no-repeat 17px 21px;
+	width:250px;
+	margin:50px auto;
+	padding: 20px 20px 40px 55px;
+	position:relative;
+}
+#testimonials .testimonial{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:175px;
+	z-index:1;
+}
+#testimonials h2{
+	color:#AABEAD;
+	font-size:22px;
+	font-style:normal;
+	line-height:22px;
+	margin-bottom:10px;
+}
+#test_container{
+	position:relative;
+	overflow:hidden;
+}
+#testimonials .testimonial_text{
+	font-size:14px;
+	font-family:verdana;
+	font-style:italic;
+}
+#testimonials .testimonial_name{
+	font-size:14px;
+	margin:10px auto 3px;
+	font-style:normal;
+	font-family:arial;
+}
+#testimonials .testimonial_designation{
+	font-size: 12px;
+	line-height: 14px;
+	font-family:verdana;
+}
+#t_pagers{
+	position:absolute;
+	left:40%;
+	bottom:10px;
+	z-index:2;
+}
+#t_pagers .pager{
+	display:inline-block;
+	text-decoration:none;
+	width:10px;
+	min-height:10px;
+	margin-right:5px;
+	background:#ccc;
+	border-radius:50%;
+	cursor:pointer;
+}
+#t_pagers .pager.active{
+	background:#f25911;
+}
+</style>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+	var w,mHeight,tests=$("#testimonials");
+	w=tests.outerWidth();
+	mHeight=0;
+	tests.find(".testimonial").each(function(index){
+		$("#t_pagers").find(".pager:eq(0)").addClass("active");	//make the first pager active initially
+		if(index==0)
+			$(this).addClass("active");	//make the first slide active initially
+		if($(this).height()>mHeight)	//just finding the max height of the slides
+			mHeight=$(this).height();
+		var l=index*w;				//find the left position of each slide
+		$(this).css("left",l);			//set the left position
+		tests.find("#test_container").height(mHeight);	//make the height of the slider equal to the max height of the slides
+	});
+	$(".pager").on("click",function(e){	//clicking action for pagination
+		e.preventDefault();
+		next=$(this).index(".pager");
+		clearInterval(t_int);	//clicking stops the autoplay we will define later
+		moveIt(next);
+	});
+	var t_int=setInterval(function(){	//for autoplay
+		var i=$(".testimonial.active").index(".testimonial");
+		if(i==$(".testimonial").length-1)
+			next=0;
+		else
+			next=i+1;
+		moveIt(next);
+	},3000);
+});
+function moveIt(next){	//the main sliding function
+	var c=parseInt($(".testimonial.active").removeClass("active").css("left"));	//current position
+	var n=parseInt($(".testimonial").eq(next).addClass("active").css("left"));	//new position
+	$(".testimonial").each(function(){	//shift each slide
+		if(n>c)
+			$(this).animate({'left':'-='+(n-c)+'px'});
+		else
+			$(this).animate({'left':'+='+Math.abs(n-c)+'px'});
+	});
+	$(".pager.active").removeClass("active");	//very basic
+	$("#t_pagers").find(".pager").eq(next).addClass("active");	//very basic
+}
+</script>
+</head>
+
+<body>
+<!--==============================
+              header
+=================================-->
+<header>
+<!--==============================
+            Stuck menu=================================-->
+      <section id="stuck_container">
+        <div class="container">
+          <div class="row">
+            <div class="grid_12">
+              <h1> <a href="index.html"> 
+			  <img src="images/logo.png" alt="Blush and Bloom Beauty" longdesc="Complementary and Holistic Beauty Therapist">
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="index-4.html"> 
+			  <img alt="" src="images/booktreatment1.png"
+
+                    height="100" width="100" class="auto-style1"></a></h1>
+              <div class="navigation">
+                <nav>
+                  <ul class="sf-menu">
+                    <li class="current"><a href="index.html">home</a></li>
+                    <li><a href="index-1.html">treatments</a></li>
+                    <li><a href="index-2.html">prices</a></li>
+                    <li><a href="index-3.html">office</a></li>
+                    <li><a href="index-4.html">contacts</a></li>
+                  </ul>
+                </nav>
+                <div class="clear"></div>
+              </div>
+              <span class="right"><i class="fa fa-phone"></i>&nbsp;&nbsp; 07467
+                316898 | Holistic Massage Therapist</span></div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--=====================
+          Content
+======================-->
+<section class="content"><div class="ic"></div>
+  <div class="container">
+    <div class="row">
+        <div class="grid_7">
+			<div class="blog"><div class="blog_title"><span lang="en-gb">Corporate 
+				Massage Treatments</span><a href="#"> </a></div>
+	<img src="images/CORPORATE.jpg" alt=
+        
+           <span class="color1 fw">Johanna can offer a range of therapies that can be carried out at your work place in Leeds. Have your Staff feeling great with her range of treatment
+ <br>
+      <br>  Allowing your employees a few minutes rest while they enjoy a mini treatment will help them return to the task in hand feeling refreshed and valued by their employer. You can therefore expect to increase your staffs commitment, output and moral.<br><br>Johanna currently works alongside<strong> Leeds City Council</strong> to deliver <strong> Wellbeing Events</strong> to <strong>Council Staff</strong>.<br><br>She can offer seated mini treatments at employees desks (taking around 5mins) or alternatively she can set up a treatment area in a spare meeting room or staff room.<br><br></span><table>
+          <tbody>
+            <tr>
+               <td colspan="9">
+            <div class="fa fa-arrow-down"></div>    
+                <a name="Express_manicure/Pedicure"></a><strong>Mini therapies at the desk or in a seperate room</strong></td> 
+            </tr>
+<tr>
+               <td colspan="8">
+                <span class="fa fa-arrow-right"></span>
+                <a name="Half_Leg">Full day</a>
+              </td>
+              <td><div class="fa fa-clock-o"></div>7hr</td>
+              <td><span class="fa fa-gbp"></span>150</td>
+            </tr>
+<tr>
+               <td colspan="8">
+                <span class="fa fa-arrow-right"></span>
+                <a name="Half_Leg">Half day</a><!--<br><i class="fa fa-asterisk"></i>( special offer &pound;8 )--> 
+              </td>
+              <td><div class="fa fa-clock-o"></div>4hr</td>
+              <td><span class="fa fa-gbp"></span>100</td>
+            </tr>
+              
+            <tr>
+               <td colspan="9">
+                <div class="fa fa-arrow-down"></div>
+                <a name="Express_manicure/Pedicure"></a><strong>Therapies available with couch in a seperate room</strong></td> 
+              
+            </tr>
+<tr>
+               <td colspan="8">
+                <span class="fa fa-arrow-right"></span>
+                <a name="Half_Leg">Full day</a>
+              </td>
+              <td><div class="fa fa-clock-o"></div>7hr</td>
+              <td><span class="fa fa-gbp"></span>180</td>
+            </tr>
+<tr>
+               <td colspan="8">
+                <span class="fa fa-arrow-right"></span>
+                <a name="Half_Leg">Half day</a><!--<br><i class="fa fa-asterisk"></i>( special offer &pound;8 )--> 
+              </td>
+              <td><div class="fa fa-clock-o"></div>4hr</td>
+              <td><span class="fa fa-gbp"></span>125</td>
+            </tr>
+              <tr>
+               
+            </tbody>
+            </table>      
+        	</div>
+		</div>
+
+
+      <div class="grid_4 preffix_1">
+        <!--<h2>what do people say</h2>-->
+        <!--<ul class="list">
+          <li><a href="#">Herem ipsum dolor </a></li>
+          <li><a href="#">sit Komet,tetur </a></li>
+          <li><a href="#">Odipiscingt</a></li>
+          <li><a href="#">In mollis eratttis </a></li>
+          <li><a href="#">Neque Loacilisis, sit </a></li>
+          <li><a href="#">Amet ultret</a></li>
+          <li><a href="#">Icies erat rutrums </a></li>
+        </ul>-->
+
+       <!--<h2>Recent Posts</h2>
+        <div class="block3">
+          <img src="images/page4_img4.jpg" alt="" class="img_inner noresize fleft">
+          <div class="extra_wrapper">
+            <div class="text1 color1">
+              <time datetime="2014-01-01">20-05-2014</time>
+              <a href="#">Hivamus at magnate </a>
+            </div>JOHANNA. Aliquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnec <a href="#" class="color1">[...]</a>
+          </div>
+        </div>
+        <div class="auto-style2">
+          <img src="images/page4_img5.jpg" alt="" class="img_inner noresize fleft">
+          <div class="extra_wrapper">
+            <div class="text1 color1">
+              <time datetime="2014-01-01">25-05-2014</time>
+              <a href="#">Livamus aot magte </a>
+            </div>Tehoncus. Aliquam nibh tegestas id ictum ado. Praesentertoaucibus maleada faucibusnece <a href="#" class="color1">[...]</a>
+          </div><br><br><br>
+        	
+        </div>-->
+        <br><br><h3 class="ta__center">
+		 <p class="auto-style8">WHAT ARE CLIENTS SAYING!&nbsp;&nbsp;<i class="fa fa-arrow-circle-down"></i></p><span class="auto-style5"> 
+		  <a name="BodyWork_Therapies_">About BodyWork Therapies By Jo</a></span></h3><div id="testimonials">
+		<h2>TESTIMONIALS</h2>
+		<div id="test_container">
+			<div class="testimonial">
+				<div class="testimonial_text"><strong>Thank you so much Johanna.</strong><br>I look forward to my<br><strong>next appointment</strong></div>
+				<h3 class="testimonial_name">- Katy Lewis</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Leeds.</div>
+			</div>
+			<div class="testimonial">
+				<div class="testimonial_text">Johanna is professional, competent and caring. Wonderful massage. Had my best sleep in months. I will be returning!</div>
+				<h3 class="testimonial_name">- Sarah Fawcett</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Castleford.</div>
+			</div>
+			<div class="testimonial">
+				<div class="testimonial_text">This was a fantastic experience that I totally recommend. Johanna was brilliant and I felt like I was walking on air afterwards. I have already booked in for another appointment.</div>
+				<h3 class="testimonial_name">- Jenny Taylor</h3>
+				<div class="testimonial_designation">&nbsp;&nbsp;&nbsp;Beeston</div>
+			</div>
+		</div>
+		<div id="t_pagers"><a class="pager"></a><a class="pager"></a><a class="pager"></a></div>
+
+
+
+      </div><br><a href="http://findatherapist.fht.org.uk/users/butterfield190578">
+		<img alt="" height="250" src="images/fhtmembershiplarge.png" style="float: right" width="400"></a>
+
+
+    </div></div>
+  </div>
+</section>
+<!--==============================
+              footer=================================-->
+    <footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="grid_12">  
+        <div class="socials">
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google-plus"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </div>
+        <div class="copyright"><span class="brand">BODYWORKTHERAPIESBYJO </span> &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <div>Holistic Massage Therapist <a href="" rel="nofollow"></a></div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</footer> 
+</body>
+</html>
+
