@@ -1041,3 +1041,8 @@ header h1 a img {
         width: auto;
     }
 }
+
+/*============================ipone====================================*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) { /* STYLES GO HERE */}
