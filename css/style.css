@@ -1041,3 +1041,9 @@ header h1 a img {
         width: auto;
     }
 }
+
+@media screen and (max-width: 420px)
+{
+    #heading { color:blue; }
+    #subheading { color:blue; }
+}
