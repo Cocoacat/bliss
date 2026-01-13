@@ -120,7 +120,7 @@ var $j = jQuery.noConflict();
             </nav>        
             <div class="clear"></div>
               </div>
-           <div><span class="nowrap">&nbsp; &nbsp; &nbsp; &nbsp; </span></div><div><span class="nowrap"><h3>To Book your appointment please go to Booksy.com or use the Booksy app above. I cannot answer calls while in a treatment.</h3></span></div><div><h3><span class="nowrap">If you have any general enquiries please text&nbsp;<i class="fa fa-phone">&nbsp;&nbsp;</i>&nbsp; 07506&nbsp;131672&nbsp; and I will get back to you</span></h3>&nbsp;&nbsp;</div>
+           <div><span class="nowrap">&nbsp; &nbsp; &nbsp; &nbsp; </span></div><div><span class="nowrap"><h3>To Book your appointment please go to Treatwell.co.uk or use the Treatwell app above. I cannot answer calls while in a treatment.</h3></span></div><div><h3><span class="nowrap">If you have any general enquiries please text&nbsp;<i class="fa fa-phone">&nbsp;&nbsp;</i>&nbsp; 07506&nbsp;131672&nbsp; and I will get back to you</span></h3>&nbsp;&nbsp;</div>
           </div>
         </div>
       </section>
@@ -382,10 +382,24 @@ Cancellation fees are in effect to ensure that I am fully compensated for my tim
               }());
             </script>
 
-            <a href="https://booksy.com/en-gb/151508_bodywork-therapies-by-jo_wellness-day-spa_1471373_leeds#ba_s=sr_1t"
-                    onclick='wahanda.openOnlineBookingWidget("https://widget.code.js?id=151508&country=gb&lang=en"); return false;' target="_blank">
-                <span>Book now on Booksy!</span>
+                                   <script src="https://widget.treatwell.co.uk/common/venue-menu/javascript/widget-button.js?v1"></script>
+
+            <script>
+              (function() {
+                var link = document.createElement("link");
+                link.type = "text/css";
+                link.href = "https://widget.treatwell.co.uk/common/venue-menu/css/widget-button.css";
+                link.rel = "stylesheet";
+                link.media = "screen";
+                document.getElementsByTagName("head")[0].appendChild(link);
+              }());
+            </script>
+
+            <a href='https://www.treatwell.co.uk/' id="wahanda-online-booking-widget"
+                    onclick='wahanda.openOnlineBookingWidget("https://widget.treatwell.co.uk/place/368339/menu/"); return false;' target="_blank">
+                <span>Book now!</span>
             </a>
+            
             </span></a><br><p style="font-size:15px">To Book your appointment please click on the Booksy.com link above <br>or text&nbsp;<i class="fa fa-phone">&nbsp;&nbsp;</i>&nbsp; 07506&nbsp;131672 for general enquires and I will get back to you&nbsp;&nbsp;</p></li>
         </ul>
       </div>
@@ -417,6 +431,7 @@ Cancellation fees are in effect to ensure that I am fully compensated for my tim
 	
 </body>
 </html>
+
 
 
 
